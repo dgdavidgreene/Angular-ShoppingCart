@@ -89,7 +89,43 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\controller.js" />
+    <Content Include="app\product.js" />
+    <Content Include="app\shoppingCart.js" />
+    <Content Include="app\store.js" />
+    <Content Include="css\style.css" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\products\apl.jpg" />
+    <Content Include="img\products\avc.jpg" />
+    <Content Include="img\products\ban.jpg" />
+    <Content Include="img\products\ctp.jpg" />
+    <Content Include="img\products\fig.jpg" />
+    <Content Include="img\products\grf.jpg" />
+    <Content Include="img\products\grp.jpg" />
+    <Content Include="img\products\gua.jpg" />
+    <Content Include="img\products\kiw.jpg" />
+    <Content Include="img\products\lyc.jpg" />
+    <Content Include="img\products\man.jpg" />
+    <Content Include="img\products\org.jpg" />
+    <Content Include="img\products\pap.jpg" />
+    <Content Include="img\products\pch.jpg" />
+    <Content Include="img\products\per.jpg" />
+    <Content Include="img\products\pmg.jpg" />
+    <Content Include="img\products\pnp.jpg" />
+    <Content Include="img\products\psm.jpg" />
+    <Content Include="img\products\str.jpg" />
+    <Content Include="img\products\tng.jpg" />
+    <Content Include="img\products\wml.jpg" />
+    <Content Include="img\r0.png" />
+    <Content Include="img\r1.png" />
+    <Content Include="img\r2.png" />
+    <Content Include="img\r3.png" />
+    <Content Include="img\r4.png" />
     <Content Include="packages.config" />
+    <Content Include="partials\product.htm" />
+    <Content Include="partials\shoppingCart.htm" />
+    <Content Include="partials\store.htm" />
     <Content Include="Scripts\version.json" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -389,7 +425,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
-    <Folder Include="Partials\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <PropertyGroup>
