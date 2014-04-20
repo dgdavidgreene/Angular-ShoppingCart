@@ -6,21 +6,21 @@ function shoppingCart(cartName) {
     this.clearCart = false;
     this.checkoutParameters = {};
     this.items = [];
-
+  /* 
     // load items from local storage when initializing
     this.loadItems();
 
     // save items to local storage when unloading
     var self = this;
-    $(window).unload(function () {
+ $(window).unload(function () {
         if (self.clearCart) {
             self.clearItems();
         }
         self.saveItems();
         self.clearCart = false;
-    });
+    });*/
 }
-
+/*
 // load items from local storage
 shoppingCart.prototype.loadItems = function () {
     var items = localStorage != null ? localStorage[this.cartName + "_items"] : null;
@@ -47,7 +47,7 @@ shoppingCart.prototype.saveItems = function () {
         localStorage[this.cartName + "_items"] = JSON.stringify(this.items);
     }
 }
-
+*/
 // adds an item to the cart
 shoppingCart.prototype.addItem = function (sku, name, price, quantity) {
     quantity = this.toNumber(quantity);

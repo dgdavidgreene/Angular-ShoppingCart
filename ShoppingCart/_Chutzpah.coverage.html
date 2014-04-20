@@ -1,0 +1,247 @@
+
+<html>
+<head>
+    <title>Chutzpah Code Coverage Results</title>
+    <script type='text/javascript'>
+        
+function chutzpah_toggleSource(id) {
+        var element = document.getElementById(id);
+        if(element.style.display === 'block') {
+            element.style.display = 'none';
+        } else {
+            element.style.display = 'block';
+        }
+    }
+
+    </script>
+    <style>
+        
+#chutzpah-main
+{
+  background:#EEE;
+  clear:both;
+  color:#333;
+  font-family:'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Calibri, Helvetica, Arial, sans-serif;
+  font-size:17px;
+  margin:2px;
+}
+
+#chutzpah-main a
+{
+  color:#333;
+  text-decoration:none;
+}
+
+#chutzpah-main a:hover
+{
+  text-decoration:underline;
+}
+
+.chutzpah
+{
+  border-bottom:1px solid #FFF;
+  clear:both;
+  margin:0;
+  padding:5px;
+}
+
+.chutzpah-error
+{
+  color:red;
+}
+
+.chutzpah-success
+{
+  color:#5E7D00;
+}
+
+.chutzpah-file
+{
+  width:auto;
+}
+
+.chutzpah-cl
+{
+  float:left;
+}
+
+.chutzpah div.rs
+{
+  float:right;
+  margin-left:50px;
+  width:150px;
+}
+
+.chutzpah-nb
+{
+  padding-right:10px;
+}
+
+#chutzpah-main a.chutzpah-logo
+{
+  color:#3245FF;
+  cursor:pointer;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.chutzpah-source
+{
+  background-color:#FFF;
+  border:1px solid #CBCBCB;
+  color:#363636;
+  margin:25px 20px;
+  overflow-x:scroll;
+  width:80%;
+}
+
+.chutzpah-source div
+{
+  white-space:nowrap;
+}
+
+.chutzpah-source span
+{
+  background-color:#EAEAEA;
+  color:#949494;
+  display:inline-block;
+  padding:0 10px;
+  text-align:center;
+}
+
+.chutzpah-source .miss
+{
+  background-color:#e6c3c7;
+}
+
+    </style>
+</head>
+<body>
+<div id='chutzpah-main'>
+	<div class='chutzpah chutzpah-title'>
+		<div class='chutzpah-cl chutzpah-file'>
+			<a href='http://chutzpah.codeplex.com/' target='_blank' class='chutzpah-logo'>Chutzpah</a> code coverage via <a href='http://blanketjs.org' target='_blank' class='chutzpah-logo'>blanket.js</a> results
+		</div>
+		<div class='chutzpah-cl rs'>
+			Coverage (%)
+		</div>
+		<div class='chutzpah-cl rs'>
+			Covered/Total Smts.
+		</div>
+		<div style='clear:both;'>
+		</div>
+	</div>
+
+
+<div class='chutzpah chutzpah-error'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>1.</span><a href='javascript:chutzpah_toggleSource("file-1")'>c:\users\david greene\documents\github\angular-shoppingcart\shoppingcart\shoppingcart\app\shoppingCart.js</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		14.78 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		17/115
+	</div>
+	<div id='file-1' class='chutzpah-source' style='display:none;'>
+		 <div class=''><span class=''>1</span>//----------------------------------------------------------------</div> <div class=''><span class=''>2</span>// shopping cart</div> <div class=''><span class=''>3</span>//</div> <div class='hit'><span class=''>4</span>function shoppingCart(cartName) {</div> <div class='hit'><span class=''>5</span>    this.cartName = cartName;</div> <div class='hit'><span class=''>6</span>    this.clearCart = false;</div> <div class='hit'><span class=''>7</span>    this.checkoutParameters = {};</div> <div class='hit'><span class=''>8</span>    this.items = [];</div> <div class=''><span class=''>9</span>  /* </div> <div class=''><span class=''>10</span>    // load items from local storage when initializing</div> <div class=''><span class=''>11</span>    this.loadItems();</div> <div class=''><span class=''>12</span></div> <div class=''><span class=''>13</span>    // save items to local storage when unloading</div> <div class=''><span class=''>14</span>    var self = this;</div> <div class=''><span class=''>15</span> $(window).unload(function () {</div> <div class=''><span class=''>16</span>        if (self.clearCart) {</div> <div class=''><span class=''>17</span>            self.clearItems();</div> <div class=''><span class=''>18</span>        }</div> <div class=''><span class=''>19</span>        self.saveItems();</div> <div class=''><span class=''>20</span>        self.clearCart = false;</div> <div class=''><span class=''>21</span>    });*/</div> <div class=''><span class=''>22</span>}</div> <div class=''><span class=''>23</span>/*</div> <div class=''><span class=''>24</span>// load items from local storage</div> <div class=''><span class=''>25</span>shoppingCart.prototype.loadItems = function () {</div> <div class=''><span class=''>26</span>    var items = localStorage != null ? localStorage[this.cartName + &quot;_items&quot;] : null;</div> <div class=''><span class=''>27</span>    if (items != null &amp;&amp; JSON != null) {</div> <div class=''><span class=''>28</span>        try {</div> <div class=''><span class=''>29</span>            var items = JSON.parse(items);</div> <div class=''><span class=''>30</span>            for (var i = 0; i &lt; items.length; i++) {</div> <div class=''><span class=''>31</span>                var item = items[i];</div> <div class=''><span class=''>32</span>                if (item.sku != null &amp;&amp; item.name != null &amp;&amp; item.price != null &amp;&amp; item.quantity != null) {</div> <div class=''><span class=''>33</span>                    item = new cartItem(item.sku, item.name, item.price, item.quantity);</div> <div class=''><span class=''>34</span>                    this.items.push(item);</div> <div class=''><span class=''>35</span>                }</div> <div class=''><span class=''>36</span>            }</div> <div class=''><span class=''>37</span>        }</div> <div class=''><span class=''>38</span>        catch (err) {</div> <div class=''><span class=''>39</span>            // ignore errors while loading...</div> <div class=''><span class=''>40</span>        }</div> <div class=''><span class=''>41</span>    }</div> <div class=''><span class=''>42</span>}</div> <div class=''><span class=''>43</span></div> <div class=''><span class=''>44</span>// save items to local storage</div> <div class=''><span class=''>45</span>shoppingCart.prototype.saveItems = function () {</div> <div class=''><span class=''>46</span>    if (localStorage != null &amp;&amp; JSON != null) {</div> <div class=''><span class=''>47</span>        localStorage[this.cartName + &quot;_items&quot;] = JSON.stringify(this.items);</div> <div class=''><span class=''>48</span>    }</div> <div class=''><span class=''>49</span>}</div> <div class=''><span class=''>50</span>*/</div> <div class=''><span class=''>51</span>// adds an item to the cart</div> <div class='hit'><span class=''>52</span>shoppingCart.prototype.addItem = function (sku, name, price, quantity) {</div> <div class='miss'><span class=''>53</span>    quantity = this.toNumber(quantity);</div> <div class='miss'><span class=''>54</span>    if (quantity != 0) {</div> <div class=''><span class=''>55</span></div> <div class=''><span class=''>56</span>        // update quantity for existing item</div> <div class='miss'><span class=''>57</span>        var found = false;</div> <div class='miss'><span class=''>58</span>        for (var i = 0; i &lt; this.items.length &amp;&amp; !found; i++) {</div> <div class='miss'><span class=''>59</span>            var item = this.items[i];</div> <div class='miss'><span class=''>60</span>            if (item.sku == sku) {</div> <div class='miss'><span class=''>61</span>                found = true;</div> <div class='miss'><span class=''>62</span>                item.quantity = this.toNumber(item.quantity + quantity);</div> <div class='miss'><span class=''>63</span>                if (item.quantity &lt;= 0) {</div> <div class='miss'><span class=''>64</span>                    this.items.splice(i, 1);</div> <div class=''><span class=''>65</span>                }</div> <div class=''><span class=''>66</span>            }</div> <div class=''><span class=''>67</span>        }</div> <div class=''><span class=''>68</span></div> <div class=''><span class=''>69</span>        // new item, add now</div> <div class='miss'><span class=''>70</span>        if (!found) {</div> <div class='miss'><span class=''>71</span>            var item = new cartItem(sku, name, price, quantity);</div> <div class='miss'><span class=''>72</span>            this.items.push(item);</div> <div class=''><span class=''>73</span>        }</div> <div class=''><span class=''>74</span></div> <div class=''><span class=''>75</span>        // save changes</div> <div class='miss'><span class=''>76</span>        this.saveItems();</div> <div class=''><span class=''>77</span>    }</div> <div class=''><span class=''>78</span>}</div> <div class=''><span class=''>79</span></div> <div class=''><span class=''>80</span>// get the total price for all items currently in the cart</div> <div class='hit'><span class=''>81</span>shoppingCart.prototype.getTotalPrice = function (sku) {</div> <div class='miss'><span class=''>82</span>    var total = 0;</div> <div class='miss'><span class=''>83</span>    for (var i = 0; i &lt; this.items.length; i++) {</div> <div class='miss'><span class=''>84</span>        var item = this.items[i];</div> <div class='miss'><span class=''>85</span>        if (sku == null || item.sku == sku) {</div> <div class='miss'><span class=''>86</span>            total += this.toNumber(item.quantity * item.price);</div> <div class=''><span class=''>87</span>        }</div> <div class=''><span class=''>88</span>    }</div> <div class='miss'><span class=''>89</span>    return total;</div> <div class=''><span class=''>90</span>}</div> <div class=''><span class=''>91</span></div> <div class=''><span class=''>92</span>// get the total price for all items currently in the cart</div> <div class='hit'><span class=''>93</span>shoppingCart.prototype.getTotalCount = function (sku) {</div> <div class='miss'><span class=''>94</span>    var count = 0;</div> <div class='miss'><span class=''>95</span>    for (var i = 0; i &lt; this.items.length; i++) {</div> <div class='miss'><span class=''>96</span>        var item = this.items[i];</div> <div class='miss'><span class=''>97</span>        if (sku == null || item.sku == sku) {</div> <div class='miss'><span class=''>98</span>            count += this.toNumber(item.quantity);</div> <div class=''><span class=''>99</span>        }</div> <div class=''><span class=''>100</span>    }</div> <div class='miss'><span class=''>101</span>    return count;</div> <div class=''><span class=''>102</span>}</div> <div class=''><span class=''>103</span></div> <div class=''><span class=''>104</span>// clear the cart</div> <div class='hit'><span class=''>105</span>shoppingCart.prototype.clearItems = function () {</div> <div class='miss'><span class=''>106</span>    this.items = [];</div> <div class='miss'><span class=''>107</span>    this.saveItems();</div> <div class=''><span class=''>108</span>}</div> <div class=''><span class=''>109</span></div> <div class=''><span class=''>110</span>// define checkout parameters</div> <div class='hit'><span class=''>111</span>shoppingCart.prototype.addCheckoutParameters = function (serviceName, merchantID, options) {</div> <div class=''><span class=''>112</span></div> <div class=''><span class=''>113</span>    // check parameters</div> <div class='miss'><span class=''>114</span>    if (serviceName != &quot;PayPal&quot; &amp;&amp; serviceName != &quot;Google&quot;) {</div> <div class='miss'><span class=''>115</span>        throw &quot;serviceName must be &#39;PayPal&#39; or &#39;Google&#39;.&quot;;</div> <div class=''><span class=''>116</span>    }</div> <div class='miss'><span class=''>117</span>    if (merchantID == null) {</div> <div class='miss'><span class=''>118</span>        throw &quot;A merchantID is required in order to checkout.&quot;;</div> <div class=''><span class=''>119</span>    }</div> <div class=''><span class=''>120</span></div> <div class=''><span class=''>121</span>    // save parameters</div> <div class='miss'><span class=''>122</span>    this.checkoutParameters[serviceName] = new checkoutParameters(serviceName, merchantID, options);</div> <div class=''><span class=''>123</span>}</div> <div class=''><span class=''>124</span></div> <div class=''><span class=''>125</span>// check out</div> <div class='hit'><span class=''>126</span>shoppingCart.prototype.checkout = function (serviceName, clearCart) {</div> <div class=''><span class=''>127</span></div> <div class=''><span class=''>128</span>    // select serviceName if we have to</div> <div class='miss'><span class=''>129</span>    if (serviceName == null) {</div> <div class='miss'><span class=''>130</span>        var p = this.checkoutParameters[Object.keys(this.checkoutParameters)[0]];</div> <div class='miss'><span class=''>131</span>        serviceName = p.serviceName;</div> <div class=''><span class=''>132</span>    }</div> <div class=''><span class=''>133</span></div> <div class=''><span class=''>134</span>    // sanity</div> <div class='miss'><span class=''>135</span>    if (serviceName == null) {</div> <div class='miss'><span class=''>136</span>        throw &quot;Use the &#39;addCheckoutParameters&#39; method to define at least one checkout service.&quot;;</div> <div class=''><span class=''>137</span>    }</div> <div class=''><span class=''>138</span></div> <div class=''><span class=''>139</span>    // go to work</div> <div class='miss'><span class=''>140</span>    var parms = this.checkoutParameters[serviceName];</div> <div class='miss'><span class=''>141</span>    if (parms == null) {</div> <div class='miss'><span class=''>142</span>        throw &quot;Cannot get checkout parameters for &#39;&quot; + serviceName + &quot;&#39;.&quot;;</div> <div class=''><span class=''>143</span>    }</div> <div class='miss'><span class=''>144</span>    switch (parms.serviceName) {</div> <div class=''><span class=''>145</span>        case &quot;PayPal&quot;:</div> <div class='miss'><span class=''>146</span>            this.checkoutPayPal(parms, clearCart);</div> <div class='miss'><span class=''>147</span>            break;</div> <div class=''><span class=''>148</span>        case &quot;Google&quot;:</div> <div class='miss'><span class=''>149</span>            this.checkoutGoogle(parms, clearCart);</div> <div class='miss'><span class=''>150</span>            break;</div> <div class=''><span class=''>151</span>        default:</div> <div class='miss'><span class=''>152</span>            throw &quot;Unknown checkout service: &quot; + parms.serviceName;</div> <div class=''><span class=''>153</span>    }</div> <div class=''><span class=''>154</span>}</div> <div class=''><span class=''>155</span></div> <div class=''><span class=''>156</span>// check out using PayPal</div> <div class=''><span class=''>157</span>// for details see:</div> <div class=''><span class=''>158</span>// www.paypal.com/cgi-bin/webscr?cmd=p/pdn/howto_checkout-outside</div> <div class='hit'><span class=''>159</span>shoppingCart.prototype.checkoutPayPal = function (parms, clearCart) {</div> <div class=''><span class=''>160</span></div> <div class=''><span class=''>161</span>    // global data</div> <div class='miss'><span class=''>162</span>    var data = {</div> <div class=''><span class=''>163</span>        cmd: &quot;_cart&quot;,</div> <div class=''><span class=''>164</span>        business: parms.merchantID,</div> <div class=''><span class=''>165</span>        upload: &quot;1&quot;,</div> <div class=''><span class=''>166</span>        rm: &quot;2&quot;,</div> <div class=''><span class=''>167</span>        charset: &quot;utf-8&quot;</div> <div class=''><span class=''>168</span>    };</div> <div class=''><span class=''>169</span></div> <div class=''><span class=''>170</span>    // item data</div> <div class='miss'><span class=''>171</span>    for (var i = 0; i &lt; this.items.length; i++) {</div> <div class='miss'><span class=''>172</span>        var item = this.items[i];</div> <div class='miss'><span class=''>173</span>        var ctr = i + 1;</div> <div class='miss'><span class=''>174</span>        data[&quot;item_number_&quot; + ctr] = item.sku;</div> <div class='miss'><span class=''>175</span>        data[&quot;item_name_&quot; + ctr] = item.name;</div> <div class='miss'><span class=''>176</span>        data[&quot;quantity_&quot; + ctr] = item.quantity;</div> <div class='miss'><span class=''>177</span>        data[&quot;amount_&quot; + ctr] = item.price.toFixed(2);</div> <div class=''><span class=''>178</span>    }</div> <div class=''><span class=''>179</span></div> <div class=''><span class=''>180</span>    // build form</div> <div class='miss'><span class=''>181</span>    var form = $(&#39;&lt;form/&gt;&lt;/form&gt;&#39;);</div> <div class='miss'><span class=''>182</span>    form.attr(&quot;action&quot;, &quot;https://www.paypal.com/cgi-bin/webscr&quot;);</div> <div class='miss'><span class=''>183</span>    form.attr(&quot;method&quot;, &quot;POST&quot;);</div> <div class='miss'><span class=''>184</span>    form.attr(&quot;style&quot;, &quot;display:none;&quot;);</div> <div class='miss'><span class=''>185</span>    this.addFormFields(form, data);</div> <div class='miss'><span class=''>186</span>    this.addFormFields(form, parms.options);</div> <div class='miss'><span class=''>187</span>    $(&quot;body&quot;).append(form);</div> <div class=''><span class=''>188</span></div> <div class=''><span class=''>189</span>    // submit form</div> <div class='miss'><span class=''>190</span>    this.clearCart = clearCart == null || clearCart;</div> <div class='miss'><span class=''>191</span>    form.submit();</div> <div class='miss'><span class=''>192</span>    form.remove();</div> <div class=''><span class=''>193</span>}</div> <div class=''><span class=''>194</span></div> <div class=''><span class=''>195</span>// check out using Google Wallet</div> <div class=''><span class=''>196</span>// for details see:</div> <div class=''><span class=''>197</span>// developers.google.com/checkout/developer/Google_Checkout_Custom_Cart_How_To_HTML</div> <div class=''><span class=''>198</span>// developers.google.com/checkout/developer/interactive_demo</div> <div class='hit'><span class=''>199</span>shoppingCart.prototype.checkoutGoogle = function (parms, clearCart) {</div> <div class=''><span class=''>200</span></div> <div class=''><span class=''>201</span>    // global data</div> <div class='miss'><span class=''>202</span>    var data = {};</div> <div class=''><span class=''>203</span></div> <div class=''><span class=''>204</span>    // item data</div> <div class='miss'><span class=''>205</span>    for (var i = 0; i &lt; this.items.length; i++) {</div> <div class='miss'><span class=''>206</span>        var item = this.items[i];</div> <div class='miss'><span class=''>207</span>        var ctr = i + 1;</div> <div class='miss'><span class=''>208</span>        data[&quot;item_name_&quot; + ctr] = item.sku;</div> <div class='miss'><span class=''>209</span>        data[&quot;item_description_&quot; + ctr] = item.name;</div> <div class='miss'><span class=''>210</span>        data[&quot;item_price_&quot; + ctr] = item.price.toFixed(2);</div> <div class='miss'><span class=''>211</span>        data[&quot;item_quantity_&quot; + ctr] = item.quantity;</div> <div class='miss'><span class=''>212</span>        data[&quot;item_merchant_id_&quot; + ctr] = parms.merchantID;</div> <div class=''><span class=''>213</span>    }</div> <div class=''><span class=''>214</span></div> <div class=''><span class=''>215</span>    // build form</div> <div class='miss'><span class=''>216</span>    var form = $(&#39;&lt;form/&gt;&lt;/form&gt;&#39;);</div> <div class=''><span class=''>217</span>    // NOTE: in production projects, use the checkout.google url below;</div> <div class=''><span class=''>218</span>    // for debugging/testing, use the sandbox.google url instead.</div> <div class=''><span class=''>219</span>    //form.attr(&quot;action&quot;, &quot;https://checkout.google.com/api/checkout/v2/merchantCheckoutForm/Merchant/&quot; + parms.merchantID);</div> <div class='miss'><span class=''>220</span>    form.attr(&quot;action&quot;, &quot;https://sandbox.google.com/checkout/api/checkout/v2/checkoutForm/Merchant/&quot; + parms.merchantID);</div> <div class='miss'><span class=''>221</span>    form.attr(&quot;method&quot;, &quot;POST&quot;);</div> <div class='miss'><span class=''>222</span>    form.attr(&quot;style&quot;, &quot;display:none;&quot;);</div> <div class='miss'><span class=''>223</span>    this.addFormFields(form, data);</div> <div class='miss'><span class=''>224</span>    this.addFormFields(form, parms.options);</div> <div class='miss'><span class=''>225</span>    $(&quot;body&quot;).append(form);</div> <div class=''><span class=''>226</span></div> <div class=''><span class=''>227</span>    // submit form</div> <div class='miss'><span class=''>228</span>    this.clearCart = clearCart == null || clearCart;</div> <div class='miss'><span class=''>229</span>    form.submit();</div> <div class='miss'><span class=''>230</span>    form.remove();</div> <div class=''><span class=''>231</span>}</div> <div class=''><span class=''>232</span></div> <div class=''><span class=''>233</span>// utility methods</div> <div class='hit'><span class=''>234</span>shoppingCart.prototype.addFormFields = function (form, data) {</div> <div class='miss'><span class=''>235</span>    if (data != null) {</div> <div class='miss'><span class=''>236</span>        $.each(data, function (name, value) {</div> <div class='miss'><span class=''>237</span>            if (value != null) {</div> <div class='miss'><span class=''>238</span>                var input = $(&quot;&lt;input&gt;&lt;/input&gt;&quot;).attr(&quot;type&quot;, &quot;hidden&quot;).attr(&quot;name&quot;, name).val(value);</div> <div class='miss'><span class=''>239</span>                form.append(input);</div> <div class=''><span class=''>240</span>            }</div> <div class=''><span class=''>241</span>        });</div> <div class=''><span class=''>242</span>    }</div> <div class=''><span class=''>243</span>}</div> <div class='hit'><span class=''>244</span>shoppingCart.prototype.toNumber = function (value) {</div> <div class='miss'><span class=''>245</span>    value = value * 1;</div> <div class='miss'><span class=''>246</span>    return isNaN(value) ? 0 : value;</div> <div class=''><span class=''>247</span>}</div> <div class=''><span class=''>248</span></div> <div class=''><span class=''>249</span>//----------------------------------------------------------------</div> <div class=''><span class=''>250</span>// checkout parameters (one per supported payment service)</div> <div class=''><span class=''>251</span>//</div> <div class='hit'><span class=''>252</span>function checkoutParameters(serviceName, merchantID, options) {</div> <div class='miss'><span class=''>253</span>    this.serviceName = serviceName;</div> <div class='miss'><span class=''>254</span>    this.merchantID = merchantID;</div> <div class='miss'><span class=''>255</span>    this.options = options;</div> <div class=''><span class=''>256</span>}</div> <div class=''><span class=''>257</span></div> <div class=''><span class=''>258</span>//----------------------------------------------------------------</div> <div class=''><span class=''>259</span>// items in the cart</div> <div class=''><span class=''>260</span>//</div> <div class='hit'><span class=''>261</span>function cartItem(sku, name, price, quantity) {</div> <div class='miss'><span class=''>262</span>    this.sku = sku;</div> <div class='miss'><span class=''>263</span>    this.name = name;</div> <div class='miss'><span class=''>264</span>    this.price = price * 1;</div> <div class='miss'><span class=''>265</span>    this.quantity = quantity * 1;</div> <div class='{{executed}}'><span class=''>266</span>}</div> <div class='{{executed}}'><span class=''>267</span></div>
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+<div class='chutzpah chutzpah-success'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>2.</span><a href='javascript:chutzpah_toggleSource("file-2")'>c:\users\david greene\documents\github\angular-shoppingcart\shoppingcart\javascripttests\specs\tests_shoppingcart.js</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		100 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		8/8
+	</div>
+	<div id='file-2' class='chutzpah-source' style='display:none;'>
+		 <div class=''><span class=''>1</span>/// &lt;reference path=&quot;../Scripts/jasmine.js&quot; /&gt;</div> <div class=''><span class=''>2</span>/// &lt;reference path=&quot;../../shoppingcart/app/shoppingCart.js&quot; /&gt;</div> <div class=''><span class=''>3</span></div> <div class=''><span class=''>4</span></div> <div class='hit'><span class=''>5</span>describe(&quot;shoppingCart&quot;, function () {</div> <div class='hit'><span class=''>6</span>    var testCart;</div> <div class='hit'><span class=''>7</span>    beforeEach(function () {</div> <div class='hit'><span class=''>8</span>        testCart = new shoppingCart(&quot;TestStore&quot;);</div> <div class=''><span class=''>9</span>    });</div> <div class=''><span class=''>10</span></div> <div class='hit'><span class=''>11</span>    it(&quot;should have the correct cartName&quot;, function () {</div> <div class='hit'><span class=''>12</span>        expect(testCart).hasOwnProperty(&quot;cartName&quot;);</div> <div class='hit'><span class=''>13</span>        var name = testCart.cartName;</div> <div class='hit'><span class=''>14</span>        expect(name).toBe(&quot;TestStore&quot;)</div> <div class='{{executed}}'><span class=''>15</span>    });</div> <div class='{{executed}}'><span class=''>16</span>/*</div> <div class='{{executed}}'><span class=''>17</span>    it(&quot;should get a product&quot;, function () {</div> <div class='{{executed}}'><span class=''>18</span>        expect(testStore).toBeDefined();</div> <div class='{{executed}}'><span class=''>19</span>        var result = testStore.getProduct(&quot;WML&quot;);</div> <div class='{{executed}}'><span class=''>20</span>        expect(result).toBeDefined();</div> <div class='{{executed}}'><span class=''>21</span>        expect(result).hasOwnProperty(&quot;sku&quot;);</div> <div class='{{executed}}'><span class=''>22</span>    });</div> <div class='{{executed}}'><span class=''>23</span></div> <div class='{{executed}}'><span class=''>24</span>    it(&quot;should have captions&quot;, function () {</div> <div class='{{executed}}'><span class=''>25</span>        expect(testStore).toBeDefined();</div> <div class='{{executed}}'><span class=''>26</span>        var result = testStore.dvaCaption;</div> <div class='{{executed}}'><span class=''>27</span>        expect(result).toBeDefined();</div> <div class='{{executed}}'><span class=''>28</span>    });</div> <div class='{{executed}}'><span class=''>29</span></div> <div class='{{executed}}'><span class=''>30</span>    it(&quot;should have a range of values&quot;, function () {</div> <div class='{{executed}}'><span class=''>31</span>        expect(testStore).toBeDefined();</div> <div class='{{executed}}'><span class=''>32</span>        var result = testStore.dvaRange;</div> <div class='{{executed}}'><span class=''>33</span>        expect(result).toBeDefined();</div> <div class='{{executed}}'><span class=''>34</span>    });*/</div> <div class='{{executed}}'><span class=''>35</span>});</div>
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+<div class='chutzpah chutzpah-success'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>3.</span><a href='javascript:chutzpah_toggleSource("file-3")'>c:\users\david greene\documents\github\angular-shoppingcart\shoppingcart\shoppingcart\app\product.js</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		100 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		7/7
+	</div>
+	<div id='file-3' class='chutzpah-source' style='display:none;'>
+		 <div class=''><span class=''>1</span>//----------------------------------------------------------------</div> <div class=''><span class=''>2</span>// product class</div> <div class='hit'><span class=''>3</span>function product(sku, name, description, price, cal, carot, vitc, folate, potassium, fiber) {</div> <div class='hit'><span class=''>4</span>    this.sku = sku; // product code (SKU = stock keeping unit)</div> <div class='hit'><span class=''>5</span>    this.name = name;</div> <div class='hit'><span class=''>6</span>    this.description = description;</div> <div class='hit'><span class=''>7</span>    this.price = price;</div> <div class='hit'><span class=''>8</span>    this.cal = cal;</div> <div class='hit'><span class=''>9</span>    this.nutrients = {</div> <div class='{{executed}}'><span class=''>10</span>        &quot;Carotenoid&quot;: carot,</div> <div class='{{executed}}'><span class=''>11</span>        &quot;Vitamin C&quot;: vitc,</div> <div class='{{executed}}'><span class=''>12</span>        &quot;Folates&quot;: folate,</div> <div class='{{executed}}'><span class=''>13</span>        &quot;Potassium&quot;: potassium,</div> <div class='{{executed}}'><span class=''>14</span>        &quot;Fiber&quot;: fiber</div> <div class='{{executed}}'><span class=''>15</span>    };</div> <div class='{{executed}}'><span class=''>16</span>}</div>
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+<div class='chutzpah chutzpah-success'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>4.</span><a href='javascript:chutzpah_toggleSource("file-4")'>c:\users\david greene\documents\github\angular-shoppingcart\shoppingcart\shoppingcart\app\store.js</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		88.89 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		8/9
+	</div>
+	<div id='file-4' class='chutzpah-source' style='display:none;'>
+		 <div class=''><span class=''>1</span>//----------------------------------------------------------------</div> <div class=''><span class=''>2</span>// store (contains the products)</div> <div class=''><span class=''>3</span>//</div> <div class=''><span class=''>4</span>// NOTE: nutritional info from http://www.cspinet.org/images/fruitcha.jpg</div> <div class=''><span class=''>5</span>// score legend:</div> <div class=''><span class=''>6</span>// 0: below 5% of daily value (DV)</div> <div class=''><span class=''>7</span>// 1: 5-10% DV</div> <div class=''><span class=''>8</span>// 2: 10-20% DV</div> <div class=''><span class=''>9</span>// 3: 20-40% DV</div> <div class=''><span class=''>10</span>// 4: above 40% DV</div> <div class=''><span class=''>11</span>//</div> <div class='hit'><span class=''>12</span>function store() {</div> <div class='hit'><span class=''>13</span>    this.products = [</div> <div class=''><span class=''>14</span>        new product(&quot;APL&quot;, &quot;Apple&quot;, &quot;Eat one every day to keep the doctor away!&quot;, 12, 90, 0, 2, 0, 1, 2),</div> <div class=''><span class=''>15</span>        new product(&quot;AVC&quot;, &quot;Avocado&quot;, &quot;Guacamole anyone?&quot;, 16, 90, 0, 1, 1, 1, 2),</div> <div class=''><span class=''>16</span>        new product(&quot;BAN&quot;, &quot;Banana&quot;, &quot;These are rich in Potassium and easy to peel.&quot;, 4, 120, 0, 2, 1, 2, 2),</div> <div class=''><span class=''>17</span>        new product(&quot;CTP&quot;, &quot;Cantaloupe&quot;, &quot;Delicious and refreshing.&quot;, 3, 50, 4, 4, 1, 2, 0),</div> <div class=''><span class=''>18</span>        new product(&quot;FIG&quot;, &quot;Fig&quot;, &quot;OK, not that nutritious, but sooo good!&quot;, 10, 100, 0, 0, 0, 1, 2),</div> <div class=''><span class=''>19</span>        new product(&quot;GRF&quot;, &quot;Grapefruit&quot;, &quot;Pink or red, always healthy and delicious.&quot;, 11, 50, 4, 4, 1, 1, 1),</div> <div class=''><span class=''>20</span>        new product(&quot;GRP&quot;, &quot;Grape&quot;, &quot;Wine is great, but grapes are even better.&quot;, 8, 100, 0, 3, 0, 1, 1),</div> <div class=''><span class=''>21</span>        new product(&quot;GUA&quot;, &quot;Guava&quot;, &quot;Exotic, fragrant, tasty!&quot;, 8, 50, 4, 4, 0, 1, 2),</div> <div class=''><span class=''>22</span>        new product(&quot;KIW&quot;, &quot;Kiwi&quot;, &quot;These come from New Zealand.&quot;, 14, 90, 1, 4, 0, 2, 2),</div> <div class=''><span class=''>23</span>        new product(&quot;LYC&quot;, &quot;Lychee&quot;, &quot;Unusual and highly addictive!&quot;, 18, 125, 1, 4, 0, 2, 2),</div> <div class=''><span class=''>24</span>        new product(&quot;MAN&quot;, &quot;Mango&quot;, &quot;Messy to eat, but well worth it.&quot;, 8, 70, 3, 4, 0, 1, 1),</div> <div class=''><span class=''>25</span>        new product(&quot;ORG&quot;, &quot;Orange&quot;, &quot;Vitamin C anyone? Go ahead, make some juice.&quot;, 9, 70, 1, 4, 2, 1, 2),</div> <div class=''><span class=''>26</span>        new product(&quot;PAP&quot;, &quot;Papaya&quot;, &quot;Super-popular for breakfast.&quot;, 5, 60, 3, 4, 2, 2, 2),</div> <div class=''><span class=''>27</span>        new product(&quot;PCH&quot;, &quot;Peach&quot;, &quot;Add some cream and enjoy.&quot;, 19, 70, 1, 2, 0, 1, 2),</div> <div class=''><span class=''>28</span>        new product(&quot;PER&quot;, &quot;Pear&quot;, &quot;Delicious fresh, or cooked in red wine, or distilled.&quot;, 8, 100, 0, 2, 0, 1, 2),</div> <div class=''><span class=''>29</span>        new product(&quot;PMG&quot;, &quot;Pomegranate&quot;, &quot;Delicious, healthy, beautiful, and sophisticated!&quot;, 19, 110, 0, 2, 0, 2, 0),</div> <div class=''><span class=''>30</span>        new product(&quot;PNP&quot;, &quot;Pineapple&quot;, &quot;Enjoy it (but don&#39;t forget to peel first).&quot;, 4, 60, 0, 3, 0, 0, 1),</div> <div class=''><span class=''>31</span>        new product(&quot;PSM&quot;, &quot;Persimmon&quot;, &quot;Believe it or not, they are berries!&quot;, 6, 120, 4, 3, 0, 1, 3),</div> <div class=''><span class=''>32</span>        new product(&quot;STR&quot;, &quot;Strawberry&quot;, &quot;Beautiful, healthy, and delicious.&quot;, 7, 40, 0, 4, 1, 1, 2),</div> <div class=''><span class=''>33</span>        new product(&quot;TNG&quot;, &quot;Tangerine&quot;, &quot;Easier to peel than oranges!&quot;, 8, 50, 3, 4, 1, 1, 2),</div> <div class=''><span class=''>34</span>        new product(&quot;WML&quot;, &quot;Watermelon&quot;, &quot;Nothing comes close on those hot summer days.&quot;, 4, 90, 4, 4, 0, 1, 1)</div> <div class=''><span class=''>35</span>    ];</div> <div class='hit'><span class=''>36</span>    this.dvaCaption = [</div> <div class=''><span class=''>37</span>        &quot;Negligible&quot;,</div> <div class=''><span class=''>38</span>        &quot;Low&quot;,</div> <div class=''><span class=''>39</span>        &quot;Average&quot;,</div> <div class=''><span class=''>40</span>        &quot;Good&quot;,</div> <div class=''><span class=''>41</span>        &quot;Great&quot;</div> <div class=''><span class=''>42</span>    ];</div> <div class='hit'><span class=''>43</span>    this.dvaRange = [</div> <div class=''><span class=''>44</span>        &quot;below 5%&quot;,</div> <div class=''><span class=''>45</span>        &quot;between 5 and 10%&quot;,</div> <div class=''><span class=''>46</span>        &quot;between 10 and 20%&quot;,</div> <div class=''><span class=''>47</span>        &quot;between 20 and 40%&quot;,</div> <div class=''><span class=''>48</span>        &quot;above 40%&quot;</div> <div class=''><span class=''>49</span>    ];</div> <div class=''><span class=''>50</span></div> <div class=''><span class=''>51</span>}</div> <div class='hit'><span class=''>52</span>store.prototype.getProduct = function (sku) {</div> <div class='hit'><span class=''>53</span>    for (var i = 0; i &lt; this.products.length; i++) {</div> <div class='hit'><span class=''>54</span>        if (this.products[i].sku == sku)</div> <div class='hit'><span class=''>55</span>            return this.products[i];</div> <div class=''><span class=''>56</span>    }</div> <div class='miss'><span class=''>57</span>    return null;</div> <div class='{{executed}}'><span class=''>58</span>}</div>
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+<div class='chutzpah chutzpah-success'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>5.</span><a href='javascript:chutzpah_toggleSource("file-5")'>c:\users\david greene\documents\github\angular-shoppingcart\shoppingcart\javascripttests\specs\tests_store.js</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		100 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		20/20
+	</div>
+	<div id='file-5' class='chutzpah-source' style='display:none;'>
+		 <div class=''><span class=''>1</span>/// &lt;reference path=&quot;../Scripts/jasmine.js&quot; /&gt;</div> <div class=''><span class=''>2</span>/// &lt;reference path=&quot;../../shoppingcart/app/product.js&quot; /&gt;</div> <div class=''><span class=''>3</span>/// &lt;reference path=&quot;../../shoppingcart/app/store.js&quot; /&gt;</div> <div class=''><span class=''>4</span></div> <div class='hit'><span class=''>5</span>describe(&quot;store object&quot;, function () {</div> <div class=''><span class=''>6</span>    </div> <div class='hit'><span class=''>7</span>    beforeEach(function () {</div> <div class='hit'><span class=''>8</span>        testStore = new store();</div> <div class=''><span class=''>9</span>    });</div> <div class=''><span class=''>10</span></div> <div class='hit'><span class=''>11</span>    it(&quot;should be able to load products&quot;, function () {</div> <div class='hit'><span class=''>12</span>        expect(testStore).hasOwnProperty(&quot;products&quot;);</div> <div class='hit'><span class=''>13</span>        expect(testStore.products).toBeDefined();</div> <div class='hit'><span class=''>14</span>        result = null;</div> <div class=''><span class=''>15</span>    });</div> <div class=''><span class=''>16</span></div> <div class='hit'><span class=''>17</span>    it(&quot;should get a product&quot;, function () {</div> <div class='hit'><span class=''>18</span>        expect(testStore).toBeDefined();</div> <div class='hit'><span class=''>19</span>        var result = testStore.getProduct(&quot;WML&quot;);</div> <div class='hit'><span class=''>20</span>        expect(result).toBeDefined();</div> <div class='hit'><span class=''>21</span>        expect(result).hasOwnProperty(&quot;sku&quot;);</div> <div class=''><span class=''>22</span>    });</div> <div class=''><span class=''>23</span></div> <div class='hit'><span class=''>24</span>    it(&quot;should have captions&quot;, function () {</div> <div class='hit'><span class=''>25</span>        expect(testStore).toBeDefined();</div> <div class='hit'><span class=''>26</span>        var result = testStore.dvaCaption;</div> <div class='hit'><span class=''>27</span>        expect(result).toBeDefined();</div> <div class=''><span class=''>28</span>    });</div> <div class=''><span class=''>29</span>    </div> <div class='hit'><span class=''>30</span>    it(&quot;should have a range of values&quot;, function () {</div> <div class='hit'><span class=''>31</span>        expect(testStore).toBeDefined();</div> <div class='hit'><span class=''>32</span>        var result = testStore.dvaRange;</div> <div class='hit'><span class=''>33</span>        expect(result).toBeDefined();</div> <div class='{{executed}}'><span class=''>34</span>    });</div> <div class='{{executed}}'><span class=''>35</span>});</div>
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+<div class='chutzpah chutzpah-error'>
+	<div class='chutzpah-cl chutzpah-file'>
+		<span class='chutzpah-nb'>6.</span><a href='javascript:chutzpah_toggleSource("file-6")'>Total</a>
+	</div>
+	<div class='chutzpah-cl rs'>
+		37.74 %
+	</div>
+	<div class='chutzpah-cl rs'>
+		60/159
+	</div>
+	<div id='file-6' class='chutzpah-source' style='display:none;'>
+		
+	</div>
+	<div style='clear:both;'>
+	</div>
+</div>
+
+
+</div>
+</body>
+</html>
+

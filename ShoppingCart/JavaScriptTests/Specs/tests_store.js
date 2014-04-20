@@ -4,20 +4,17 @@
 
 describe("store object", function () {
     
-    it("should be instantiable", function () {
-        var result = new store();
-        expect(result).toBeDefined();
+    beforeEach(function () {
+        testStore = new store();
     });
 
     it("should be able to load products", function () {
-        var result = new store();
-        expect(result).hasOwnProperty("products");
-        expect(result.products).toBeDefined();
+        expect(testStore).hasOwnProperty("products");
+        expect(testStore.products).toBeDefined();
         result = null;
     });
 
     it("should get a product", function () {
-        var testStore = new store();
         expect(testStore).toBeDefined();
         var result = testStore.getProduct("WML");
         expect(result).toBeDefined();
@@ -25,14 +22,12 @@ describe("store object", function () {
     });
 
     it("should have captions", function () {
-        var testStore = new store();
         expect(testStore).toBeDefined();
         var result = testStore.dvaCaption;
         expect(result).toBeDefined();
     });
     
     it("should have a range of values", function () {
-        var testStore = new store();
         expect(testStore).toBeDefined();
         var result = testStore.dvaRange;
         expect(result).toBeDefined();
