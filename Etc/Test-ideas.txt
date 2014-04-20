@@ -1,0 +1,45 @@
+
+Store-
+All items to be displayed
+Image to be displayed for each
+Description to be displayed for each
+Price to be displayed for each
+Add to cart link to be displayed for each
+Cart partial to be on page
+Search bar to be on page
+search should returm matches after 2 char
+
+Products-
+Indicate if in the cart
+Image to be displayed
+Description to be displayed
+Price to be displayed
+Calories to be displayed
+Ratings to be displayed
+Ratings to be correct
+Add to cart button to be displayed
+Remove from cart button to be displayed
+Back to store button to be displayed
+Cart partial to be on page
+
+Shopping Cart-
+All items to be displayed
+Name to be displayed for each
+Quantity to be displayed for each
+Price to be displayed for each
+Price to be correctly calculated
+Add/Subtract controls for each
+Total line on form
+Total correctly summed
+Price total correctly calculated
+Back to store button to be displayed
+Clear cart button to be displayed
+Checkout Paypal button to be displayed
+Checkout Google button to be displayed
+Paypal image-anchor to be displayed
+Google image-anchor to be displayed
+Add/Subtract controls correctly alter quantity
+Correct price after Updating quantity
+Correct total after Updating quantity
+Correct total price after Updating quantity
+Clear cart clears cart

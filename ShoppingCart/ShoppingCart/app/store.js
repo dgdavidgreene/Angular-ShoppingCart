@@ -47,6 +47,7 @@ function store() {
         "between 20 and 40%",
         "above 40%"
     ];
+
 }
 store.prototype.getProduct = function (sku) {
     for (var i = 0; i < this.products.length; i++) {
