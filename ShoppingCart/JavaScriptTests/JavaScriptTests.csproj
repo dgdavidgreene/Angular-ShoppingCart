@@ -38,8 +38,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\jasmine.css" />
+    <Content Include="Scripts\angular.1.0.5.min.js" />
     <Content Include="Scripts\jasmine-html.js" />
+    <Content Include="Scripts\jasmine-jquery.js" />
     <Content Include="Scripts\jasmine.js" />
+    <Content Include="Scripts\jquery.1.7.1.min.js" />
     <Content Include="Specs\tests_shoppingCart.js" />
     <Content Include="Specs\tests_store.js" />
   </ItemGroup>

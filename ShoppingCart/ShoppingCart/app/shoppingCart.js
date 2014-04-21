@@ -48,6 +48,12 @@ shoppingCart.prototype.saveItems = function () {
     }
 }
 */
+
+// MOCK save items 
+shoppingCart.prototype.saveItems = function () {
+    ;    
+}
+
 // adds an item to the cart
 shoppingCart.prototype.addItem = function (sku, name, price, quantity) {
     quantity = this.toNumber(quantity);
@@ -124,7 +130,7 @@ shoppingCart.prototype.addCheckoutParameters = function (serviceName, merchantID
 
 // check out
 shoppingCart.prototype.checkout = function (serviceName, clearCart) {
-
+    /* Original
     // select serviceName if we have to
     if (serviceName == null) {
         var p = this.checkoutParameters[Object.keys(this.checkoutParameters)[0]];
@@ -132,6 +138,12 @@ shoppingCart.prototype.checkout = function (serviceName, clearCart) {
     }
 
     // sanity
+    if (serviceName == null) {
+        throw "Use the 'addCheckoutParameters' method to define at least one checkout service.";
+    }
+    */
+    //Modified
+    // throw if null
     if (serviceName == null) {
         throw "Use the 'addCheckoutParameters' method to define at least one checkout service.";
     }
